@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./output.css">
+  <title>Fish Inc.</title>
+</head>
+
+<body class="primary-bg font-sans">
+  <header class="header container mx-auto p-4 ">
+    <div class="container shadow w-full p-3 bg-white rounded-lg flex flex-row flex-no-wrap justify-start items-center ">
+
+
+      <div class="logo">
+        <img class="w-auto self-start" src="./static/logo/Logo_Fish_Inc.png" alt="">
+      </div>
+
+      <img class="px-5 opacity-50" src="./static/utilities/separadorV.svg" alt="separadorVertical">
+
+      <div class="northSouth flex flex-row flex-no-wrap justify-center items-center hidden sm:visible ">
+        <h3 class=" font-poppins text-lg font-bold mb-0 pb-0">Hemisphere</h3>
+        <div class="flex flex-row flex-no-wrap justify-center items-center ml-4">
+          <button
+            class="South text-sm font-poppins py-1 px-2 rounded-lg bg-fish-button-selected hover:bg-selected font-bold"
+            type="button">South</button>
+          <button class="North text-sm font-poppins py-1 px-2 rounded-lg bg-gray-300 hover:bg-selected font-bold ml-2"
+            type="button">North</button>
+
+          <!-- <div class="inline-flex">
+            <button class="bg-selected hover:bg-gray-400 text-gray-800 font-bold py-1 px-2 rounded-l">
+              South
+            </button>
+            <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-2 rounded-r">
+              North
+            </button>
+          </div> -->
+        </div>
+
+        <div class="px-5"></div>
+
+        <div class="mothSelector flex flex-row flex-no-wrap justify-center items-center">
+          <h3 class=" font-poppins text-lg font-bold mb-0 pb-0">Month</h3>
+          <div class="relative pl-4">
+            <select
+              class="block focus:outline-none focus:border-transparent  appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 font-poppins font-bold py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-state">
+              <option>All</option>
+              <option>Jan</option>
+              <option>Feb</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+        <!--
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="username" type="text" placeholder="Search">-->
+      </div>
+    </div>
+  </header>
+
+
+  <section id="fish"
+    class="mt-16 w-full container mx-auto bg-fish-background-lightGray  p-4 flex flex-row flex-wrap justify-start align-middle">
+
+    <!-- <div class="bg-white rounded-lg shadow-lg inline-flex flex flex-row flex-no-wrap py-4 px-4 ">
+      <!-- <img src="./static/img/Fish0.png" alt="logofish"> 
+      <div class="fish__image bg-fish-accent-red mr-2" style="width: 80px; height: 80px;">
+
+      </div>
+      <div class="fish__info__wrapper flex flex-column flex-no-wrap">
+        <div class="info__fish__up flex flex-row flex-no-wrap">
+          <h4 class="title__fish text-left font-bold text-lg">Bitterling</h4>
+          <div class="flex flex-row flex-no-wrap justify-start">
+            <img class="w-6 h-6" src="./static/img/1000Bell.png" alt="bell">
+            <p class="fish_price text-sm font-bold inline-block">$500</p>
+         
+          </div>
+        </div>
+
+        <div class="info__fish__down flex flex-row flex-no-wrap">
+
+        </div>
+      </div>
+    </div> -->
+
+    <div id="fish_tile" style="width: 360px; height: 110px;"
+      class=" inWater fish__wrapper rounded-lg shadow-lg bg-white pl-2 pr-4 py-2 mb-4 grid grid-cols-3 grid-rows-3 row-gap-1 col-gap-2  mt-1 transition-all ease-in-out border border-solid border-gray-200">
+      <div class="box py-2 pl-0 pr-2 relative row-span-3 col-span-1 flex flex-row justify-center overflow-hidden">
+        <img class="self-center" src="./static/img/Fish0.png" alt="Fish_Image">
+      </div>
+      <div class="box col-span-2 row-span-1 flex flex-row flex-no-wrap justify-between pt-1">
+        <h4 class="title__fish text-left font-bold text-base self-start">Bitterling</h4>
+        <div class="flex flex-row flex-no-wrap justify-start self-start overflow-hidden ">
+          <img class="w-6 h-6 self-center" src="./static/img/1000Bell.png" alt="bell">
+          <p class="fish_price text-base font-bold self-center">$500</p>
+        </div>
+      </div>
+      <div class="box col-span-2 row-span-2 self-end pb-1 flex flex-row flex-no-wrap justify-start">
+        <div class="fish__location flex flex-col flex-no-wrap pr-4">
+          <small class="text-sm text-gray-600">Location</small>
+          <p class="text-lg font-semibold">River</p>
+        </div>
+        <div class="fish__schedule flex flex-col flex-no-wrap">
+          <small class="text-sm text-gray-600">Schedule</small>
+          <p class="text-lg w-full font-semibold">16:00-09:00</p>
+        </div>
+        <div class="flagtags w-full flex flex-row flex-no-wrap justify-end pt-6">
+          <div
+            class="greenflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+          <div
+            class="redflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-red self-center shadow border-2 border-solid border-white">
+          </div>
+          <div
+            class="blueflag inline-block rounded-full w-4 h-4 bg-fish-accent-blue self-center  shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="fish_tile" style="width: 360px; height: 110px;"
+      class=" inWater fish__wrapper rounded-lg shadow-lg bg-white pl-2 pr-4 py-2 mb-4 grid grid-cols-3 grid-rows-3 row-gap-1 col-gap-2  mt-1 transition-all ease-in-out border border-solid border-gray-200">
+      <div class="box p-2 relative row-span-3 col-span-1 flex flex-row justify-center overflow-hidden">
+        <img class="self-center" src="./static/img/Fish60.png" alt="Fish_Image">
+      </div>
+      <div class="box col-span-2 row-span-1 flex flex-row flex-no-wrap justify-between pt-1">
+        <h4 class="title__fish text-left font-bold text-base self-start">Pez Luna</h4>
+        <div class="flex flex-row flex-no-wrap justify-start self-start overflow-hidden">
+          <img class="w-6 h-6 self-center" src="./static/img/1000Bell.png" alt="bell">
+          <p class="fish_price text-base font-bold self-center">$500</p>
+        </div>
+      </div>
+      <div class="box col-span-2 row-span-2 self-end pb-1 flex flex-row flex-no-wrap justify-start">
+        <div class="fish__location flex flex-col flex-no-wrap pr-4">
+          <small class="text-sm text-gray-600">Location</small>
+          <p class="text-lg font-semibold">River</p>
+        </div>
+        <div class="fish__schedule flex flex-col flex-no-wrap">
+          <small class="text-sm text-gray-600">Schedule</small>
+          <p class="text-lg font-semibold">16:00-09:00</p>
+        </div>
+        <div class="flagtags w-full flex flex-row flex-no-wrap justify-end pt-6">
+          <div
+            class="greenflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white ">
+          </div>
+          <div
+            class="redflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-red self-center shadow border-2 border-solid border-white">
+          </div>
+          <div
+            class="blueflag inline-block rounded-full w-4 h-4 bg-fish-accent-blue self-center  shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+  <script>
+
+    const states = document.getElementById('grid-wq');
+
+    states.addEventListener('change', function (e) {
+      console.log("Cambio")
+      console.log(e.target.value);
+    })
+  </script>
+</body>
+
+</html>
