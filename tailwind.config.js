@@ -1,6 +1,12 @@
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: false,
+    content: ['./index.html'],
+  },
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       poppins: ['Poppins'],
     },
@@ -15,6 +21,15 @@ module.exports = {
         'fish-accent-blue': '#5850EC',
         'fish-accent-red': '#FF0080',
         'fish-accent-green': '#3DF165',
+      },
+      spacing: {
+        imageFixed: '0.01rem',
+        '28': '7rem',
+        '52': '15rem',
+        '72': '18rem',
+        fisTileWMAx: '18.75rem',
+        fishHTileDefault: '6.6875rem',
+        fishTileWMin: '14.75rem',
       },
     },
   },
