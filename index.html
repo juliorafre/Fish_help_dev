@@ -2,259 +2,718 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/output.css" />
   <title>Fish Inc.</title>
 </head>
 
 <body class="primary-bg font-sans">
+  <header class="header container mx-auto p-4">
+    <div
+      class="container shadow-fishHeader w-full px-5 py-4 bg-white rounded-lg flex flex-row flex-no-wrap justify-between items-center">
+      <div class="flex flex-row flex-no-wrap justify-start items-center">
+        <div class="logo">
+          <img class="w-auto self-start" src="./static/logo/Logo_Fish_Inc.png" alt="" />
+        </div>
 
-  <header class="header container mx-auto p-4 ">
-    <div class="container shadow w-full p-3 bg-white rounded-lg flex flex-row flex-no-wrap justify-start items-center ">
+        <img class="px-5 opacity-50" src="./static/utilities/separadorV.svg" alt="separadorVertical" />
 
-      <div class="logo">
-        <img class="w-auto self-start" src="./static/logo/Logo_Fish_Inc.png" alt="">
-      </div>
-
-      <img class="px-5 opacity-50" src="./static/utilities/separadorV.svg" alt="separadorVertical">
-
-      <div class="northSouth flex flex-row flex-no-wrap justify-center items-center hidden sm:visible ">
-        <h3 class=" font-poppins text-lg font-bold mb-0 pb-0">Hemisphere</h3>
-        <div class="flex flex-row flex-no-wrap justify-center items-center ml-4">
-          <button
-            class="South text-sm font-poppins py-1 px-2 rounded-lg bg-fish-button-selected hover:bg-selected font-bold"
-            type="button">South</button>
-          <button class="North text-sm font-poppins py-1 px-2 rounded-lg bg-gray-300 hover:bg-selected font-bold ml-2"
-            type="button">North</button>
-
-          <!-- <div class="inline-flex">
-            <button class="bg-selected hover:bg-gray-400 text-gray-800 font-bold py-1 px-2 rounded-l">
+        <div class="northSouth flex flex-row flex-no-wrap justify-center items-center hidden md:inline-flex">
+          <h3 class="font-poppins text-lg font-semibold mb-0 pb-0">Hemisphere</h3>
+          <div class="flex flex-row flex-no-wrap justify-center items-center ml-4">
+            <button class="South text-sm font-poppins py-1 px-2 rounded-lg bg-fish-button-selected  font-bold"
+              type="button">
               South
             </button>
-            <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-2 rounded-r">
+            <button
+              class="North text-sm font-poppins py-1 px-2 rounded-lg bg-gray-300 hover:bg-gray-400 font-bold ml-2 "
+              type="button">
               North
             </button>
-          </div> -->
-        </div>
-
-        <div class="px-5"></div>
-
-        <div class="mothSelector flex flex-row flex-no-wrap justify-center items-center">
-          <h3 class=" font-poppins text-lg font-bold mb-0 pb-0">Month</h3>
-          <div class="relative pl-4">
-            <select
-              class="block focus:outline-none focus:border-transparent  appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 font-poppins font-bold py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-state">
-              <option>All</option>
-              <option>Jan</option>
-              <option>Feb</option>
-            </select>
-            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-            </div>
           </div>
+
+
         </div>
-        <!--
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="username" type="text" placeholder="Search">-->
+      </div>
+      <div class="madeBy">
+        <p class="font-bold text-sm">
+          <a href="https://twitter.com/juliorafre" target="_blank">Made with 👾❤️ by <span
+              class="hover:text-fish-button-selected hover:border hover:boder-solid hover:border-1 hover:border-black">@juliorafre</span></a>
+        </p>
       </div>
     </div>
   </header>
 
+  <section id='title_in_water'
+    class="container  px-6 pt-4  flex flex-col sm:flex-row flex-no-wrap justify-start  items-start sm:content-center">
 
-  <section id="fish"
-    class="container w-full mx-auto py-16 pl-4 pr-2 bg-fish-background-lightGray flex flex-row flex-wrap justify-start align-middle">
+    <h3 class="text-3xl font-bold text-fish-text-primary">In water now!</h3>
+    <p class="sm:pl-4 font-medium text-lg text-gray-600 sm:text-black sm:self-center -mt-2 sm:-mb-2">Mayo 30 - 15:38</p>
+
+  </section>
 
 
-    <!-- FISH -->
 
-    <div id="fish_tile" style="width: 360px; height: 100px;"
-      class=" inWater fish__wrapper rounded-lg shadow-lg bg-white pl-2 pr-4 py-2 mb-4 mr-4 grid grid-flow-row grid-cols-3 grid-rows-3 row-gap-1 col-gap-2 mt-1 ">
-      <div class="box p-3  relative row-span-3 col-span-1 flex flex-row justify-center overflow-hidden ">
-        <img class="self-center" src="./static/img/Fish0.png" alt="Fish_Image">
-      </div>
-      <div class="box col-span-2 row-span-1 flex flex-row flex-no-wrap justify-between pt-1 ">
-        <h4 class="title__fish truncate text-left font-bold text-base self-start">Pop-eyed Goldfish</h4>
-        <div class="flex flex-row flex-no-wrap justify-start self-start overflow-hidden ">
-          <img class="w-6 h-6 self-center" src="./static/img/1000Bell.png" alt="bell">
-          <p class="fish_price text-sm font-medium self-center">15000</p>
+  <section id="fish2"
+    class="container w-full mx-auto py-2 pb-16 px-2 bg-fish-background-lightGray flex flex-row flex-wrap justify-center content-center">
+    <!--
+      style="width: 236px; height: 107px;"
+      style="width: 320px; height: 107px;"
+      lg:w-fishTileWMin
+      18.6875rem 
+    -->
+    <div
+      class=" fishTile inWater bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
         </div>
-      </div>
-      <div class="box col-span-2 row-span-2 self-end pb-1 flex flex-row flex-no-wrap justify-start ">
-        <div class="fish__location flex flex-col flex-no-wrap pr-4">
-          <small class="text-xs text-gray-600">Location</small>
-          <p class="text-sm truncate font-semibold">Sea (Rainy)</p>
-        </div>
-        <div class="fish__schedule flex flex-col flex-no-wrap">
-          <small class="text-xs text-gray-600">Schedule</small>
-          <p class="text-sm truncate font-semibold">16:00-09:00</p>
-        </div>
-        <div class=" flagtags w-full flex flex-row flex-no-wrap justify-end pt-5 ">
 
+        <div class="flagtags">
           <div
-            class="redflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-red self-center shadow border-2 border-solid border-white">
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
           </div>
-
-          <div
-            class="greenflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
-          </div>
-
         </div>
       </div>
-    </div>
 
-    <div id="fish_tile" style="width: 360px; height: 100px;"
-      class=" inWater fish__wrapper rounded-lg shadow-lg bg-white pl-2 pr-4 py-2 mb-4 mr-4 grid grid-flow-row grid-cols-3 grid-rows-3 row-gap-1 col-gap-2 mt-1 ">
-      <div class="box p-4  relative row-span-3 col-span-1 flex flex-row justify-center overflow-hidden ">
-        <img class="self-center" src="./static/img/Fish78.png" alt="Fish_Image">
-      </div>
-      <div class="box col-span-2 row-span-1 flex flex-row flex-no-wrap justify-between pt-1 ">
-        <h4 class="title__fish truncate text-left font-bold text-lg self-start"> Bitterlight </h4>
-        <div class="flex flex-row flex-no-wrap justify-start self-start overflow-hidden ">
-          <img class="w-6 h-6 self-center" src="./static/img/1000Bell.png" alt="bell">
-          <p class="fish_price text-sm font-medium self-center">15000</p>
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
         </div>
       </div>
-      <div class="box col-span-2 row-span-2 self-end pb-1 flex flex-row flex-no-wrap justify-start ">
-        <div class="fish__location flex flex-col flex-no-wrap pr-4">
-          <small class="text-xs text-gray-600">Location</small>
-          <p class="text-sm truncate font-semibold">R. Clifftop</p>
-        </div>
-        <div class="fish__schedule flex flex-col flex-no-wrap">
-          <small class="text-xs text-gray-600">Schedule</small>
-          <p class="text-sm truncate font-semibold">16:00-09:00</p>
-        </div>
-        <div class=" flagtags w-full flex flex-row flex-no-wrap justify-end pt-5 ">
-          <div
-            class="greenflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
-          </div>
 
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
         </div>
-      </div>
-    </div>
-
-    <div id="fish_tile" style="width: 360px; height: 100px;"
-      class=" inWater fish__wrapper rounded-lg shadow-lg bg-white pl-2 pr-4 py-2 mb-4 mr-4 grid grid-flow-row grid-cols-3 grid-rows-3 row-gap-1 col-gap-2 mt-1 ">
-      <div class="box p-3  relative row-span-3 col-span-1 flex flex-row justify-center overflow-hidden ">
-        <img class="self-center" src="./static/img/Fish60.png" alt="Fish_Image">
-      </div>
-      <div class="box col-span-2 row-span-1 flex flex-row flex-no-wrap justify-between pt-1 ">
-        <h4 class="title__fish truncate text-left font-bold text-lg self-start"> Bitterlight </h4>
-        <div class="flex flex-row flex-no-wrap justify-start self-start overflow-hidden ">
-          <img class="w-6 h-6 self-center" src="./static/img/1000Bell.png" alt="bell">
-          <p class="fish_price text-sm font-medium self-center">15000</p>
-        </div>
-      </div>
-      <div class="box col-span-2 row-span-2 self-end pb-1 flex flex-row flex-no-wrap justify-start ">
-        <div class="fish__location flex flex-col flex-no-wrap pr-4">
-          <small class="text-xs text-gray-600">Location</small>
-          <p class="text-sm truncate font-semibold">Sea (Rainy)</p>
-        </div>
-        <div class="fish__schedule flex flex-col flex-no-wrap">
-          <small class="text-xs text-gray-600">Schedule</small>
-          <p class="text-sm truncate font-semibold">16:00-09:00</p>
-        </div>
-        <div class=" flagtags w-full flex flex-row flex-no-wrap justify-end pt-5 ">
-          <div
-            class="greenflag inline-block -mr-2 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
-          </div>
-
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Shadow</p>
+          <p class="font-bold text-base -mt-1">Small</p>
         </div>
       </div>
     </div>
 
 
-    <div id="fish_tile" style="width: 360px; height: 100px;"
-      class=" fish__wrapper rounded-lg shadow-lg bg-white pl-2 pr-4 py-2 mb-4 mr-4 grid grid-flow-row grid-cols-3 grid-rows-3 row-gap-1 col-gap-2 mt-1 ">
-      <div class="box p-3  relative row-span-3 col-span-1 flex flex-row justify-center overflow-hidden ">
-        <img class="self-center" src="./static/img/Fish60.png" alt="Fish_Image">
-      </div>
-      <div class="box col-span-2 row-span-1 flex flex-row flex-no-wrap justify-between pt-1 ">
-        <h4 class="title__fish truncate text-left font-bold text-lg self-start"> Bitterlight </h4>
-        <div class="flex flex-row flex-no-wrap justify-start self-start overflow-hidden ">
-          <img class="w-6 h-6 self-center" src="./static/img/1000Bell.png" alt="bell">
-          <p class="fish_price text-sm font-medium self-center">15000</p>
+    <div
+      class=" fishTile inWater bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
         </div>
-      </div>
-      <div class="box col-span-2 row-span-2 self-end pb-1 flex flex-row flex-no-wrap justify-start ">
-        <div class="fish__location flex flex-col flex-no-wrap pr-4">
-          <small class="text-xs text-gray-600">Location</small>
-          <p class="text-sm truncate font-semibold">Sea (Rainy)</p>
-        </div>
-        <div class="fish__schedule flex flex-col flex-no-wrap">
-          <small class="text-xs text-gray-600">Schedule</small>
-          <p class="text-sm truncate font-semibold">16:00-09:00</p>
-        </div>
-        <div class=" flagtags w-full flex flex-row flex-no-wrap justify-end pt-5 ">
 
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
 
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Shadow</p>
+          <p class="font-bold text-base -mt-1">Small</p>
         </div>
       </div>
     </div>
 
-    <!--/ FISH -->
+
+    <div
+      class=" fishTile inWater bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Shadow</p>
+          <p class="font-bold text-base -mt-1">Small</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile inWater bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Shadow</p>
+          <p class="font-bold text-base -mt-1">Small</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+  <section id='title_in_water' class="container  px-6 pt-4  flex flex-row flex-no-wrap justify-start content-center">
+
+    <h3 class="text-3xl font-bold text-fish-text-primary">All Fishes</h3>
+
+    <div
+      class="mothSelector flex flex-row flex-no-wrap justify-center items-center ml-4 px-4 px-1 bg-white rounded-lg shadow-md border border-1 border-solid border-gray-100">
+      <h3 class="font-poppins text-base font-bold mb-0 pb-0">Month</h3>
+      <div class="relative pl-4">
+        <select
+          class="block focus:outline-none focus:border-transparent appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 font-poppins font-bold text-sm py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-state">
+          <option>All</option>
+          <option>Jan</option>
+          <option>Feb</option>
+          <option>Mar</option>
+          <option>Apr</option>
+          <option>May</option>
+          <option>Jun</option>
+          <option>Jul</option>
+          <option>Aug</option>
+          <option>Sep</option>
+          <option>Oct</option>
+          <option>Nov</option>
+          <option>Dec</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+          </svg>
+        </div>
+      </div>
+    </div>
 
 
   </section>
 
   <section id="fish2"
-    class="container w-full mx-auto py-16 px-2 bg-fish-background-lightGray flex flex-row flex-wrap justify-center lg:justify-start align-middle ">
-
-
-    <!-- 
-      style="width: 236px; height: 107px;"
-      style="width: 320px; height: 107px;"
-      lg:w-fishTileWMin
-      18.6875rem
-     -->
-
+    class="container w-full mx-auto py-2 pb-12 px-2 bg-fish-background-lightGray flex flex-row flex-wrap justify-center content-center">
+    <!--
+    style="width: 236px; height: 107px;"
+    style="width: 320px; height: 107px;"
+    lg:w-fishTileWMin
+    18.6875rem 
+  -->
     <div
-      class="  bg-white w-fisTileWMAx  h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-lg grid grid-cols-4 grid-rows-2 border border-1 border-solid border-gray-200">
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
 
-      <div class="image_flags  col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
-        <div class=" overflow-hidden flex flex-row justify-center items-center p-1  "><img src="./static/img/Fish69.png"
-            alt="Bitterlight"></div>
         <div class="flagtags">
-          <!-- <div
-            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
-          </div> -->
-
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
         </div>
       </div>
 
-      <div class="name_price  col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
-        <div class="bg-red-300 w-2/3">
-          <p class=" font-bold text-sm truncate ">Soft-shelled Turtle</p>
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
           <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
         </div>
         <div>
-          <p class="font-bold self-start">$15000</p>
+          <p class="font-bold self-start">$900</p>
         </div>
       </div>
 
-      <div class="location_months  col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
         <div>
           <p class="text-xs text-gray-600">Location</p>
-          <p class="font-bold text-base -mt-1"> R. Mouth </p>
+          <p class="font-bold text-base -mt-1">River.</p>
         </div>
         <div class="pl-2">
           <p class="text-xs text-gray-600">Months</p>
           <p class="font-bold text-base -mt-1">May-Sep</p>
         </div>
       </div>
-
     </div>
 
     <div
-      class=" inWater bg-white w-fisTileWMAx  h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-lg grid grid-cols-4 grid-rows-2 border border-1 border-solid border-gray-200">
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
 
-      <div class="image_flags  col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
-        <div class=" overflow-hidden flex flex-row justify-center items-center p-1  "><img src="./static/img/Fish69.png"
-            alt="Bitterlight"></div>
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1 ">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish0.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-green self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div class="w-2/3">
+          <p class="font-bold text-lg truncate">Bitterlight</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-800">16:00-09:00</p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div>
+          <p class="text-xs text-gray-600">Location</p>
+          <p class="font-bold text-base -mt-1">River.</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Months</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2 ">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish69.png" alt="Bitterlight" />
+        </div>
+
         <div class="flagtags">
           <div
             class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
@@ -265,35 +724,37 @@
         </div>
       </div>
 
-      <div class="name_price  col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
         <div>
-          <p class=" font-bold ">Pez Remo</p>
-          <p class="text-xs font-semibold -mt-1 text-gray-700">16:00-09:00/14:00-15:00</p>
+          <p class="font-bold">Pez Remo</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-700">
+            16:00-09:00/14:00-15:00
+          </p>
         </div>
         <div>
           <p class="font-bold self-start">$900</p>
         </div>
       </div>
 
-      <div class="location_months  col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
         <div class="w-1/2">
           <p class="text-xs text-gray-600">Ubicación</p>
-          <p class="font-bold text-base truncate -mt-1 ">Desemboque</p>
+          <p class="font-bold text-base truncate -mt-1">Desemboque</p>
         </div>
         <div class="pl-2">
           <p class="text-xs text-gray-600">Meses</p>
           <p class="font-bold text-base -mt-1">May-Sep</p>
         </div>
       </div>
-
     </div>
 
     <div
-      class=" inWater bg-white w-fisTileWMAx  h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-lg grid grid-cols-4 grid-rows-2 border border-1 border-solid border-gray-200">
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2 ">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish69.png" alt="Bitterlight" />
+        </div>
 
-      <div class="image_flags  col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
-        <div class=" overflow-hidden flex flex-row justify-center items-center p-1  "><img src="./static/img/Fish69.png"
-            alt="Bitterlight"></div>
         <div class="flagtags">
           <div
             class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
@@ -304,35 +765,37 @@
         </div>
       </div>
 
-      <div class="name_price  col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
         <div>
-          <p class=" font-bold ">Pez Remo</p>
-          <p class="text-xs font-semibold -mt-1 text-gray-700">16:00-09:00/14:00-15:00</p>
+          <p class="font-bold">Pez Remo</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-700">
+            16:00-09:00/14:00-15:00
+          </p>
         </div>
         <div>
           <p class="font-bold self-start">$900</p>
         </div>
       </div>
 
-      <div class="location_months  col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
         <div class="w-1/2">
           <p class="text-xs text-gray-600">Ubicación</p>
-          <p class="font-bold text-base truncate -mt-1 ">Desemboque</p>
+          <p class="font-bold text-base truncate -mt-1">Desemboque</p>
         </div>
         <div class="pl-2">
           <p class="text-xs text-gray-600">Meses</p>
           <p class="font-bold text-base -mt-1">May-Sep</p>
         </div>
       </div>
-
     </div>
 
     <div
-      class=" inWater bg-white w-fisTileWMAx  h-fishHTileDefault mx-2 mt-3 rounded-lg pr-3 pl-0 py-2 shadow-lg grid grid-cols-4 grid-rows-2 border border-1 border-solid border-gray-200">
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2 ">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish69.png" alt="Bitterlight" />
+        </div>
 
-      <div class="image_flags  col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
-        <div class=" overflow-hidden flex flex-row justify-center items-center p-1  "><img src="./static/img/Fish69.png"
-            alt="Bitterlight"></div>
         <div class="flagtags">
           <div
             class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
@@ -343,30 +806,76 @@
         </div>
       </div>
 
-      <div class="name_price  col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
         <div>
-          <p class=" font-bold ">Pez Remo</p>
-          <p class="text-xs font-semibold -mt-1 text-gray-700">16:00-09:00/14:00-15:00</p>
+          <p class="font-bold">Pez Remo</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-700">
+            16:00-09:00/14:00-15:00
+          </p>
         </div>
         <div>
           <p class="font-bold self-start">$900</p>
         </div>
       </div>
 
-      <div class="location_months  col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
         <div class="w-1/2">
           <p class="text-xs text-gray-600">Ubicación</p>
-          <p class="font-bold text-base truncate -mt-1 ">Desemboque</p>
+          <p class="font-bold text-base truncate -mt-1">Desemboque</p>
         </div>
         <div class="pl-2">
           <p class="text-xs text-gray-600">Meses</p>
           <p class="font-bold text-base -mt-1">May-Sep</p>
         </div>
       </div>
-
     </div>
+
+    <div
+      class=" fishTile  bg-white w-fisTileWMAx h-fishHTileDefault mx-2 mt-4 rounded-lg pr-3 pl-0 py-2 shadow-md hover:shadow-lg grid grid-cols-4 grid-rows-2 ">
+      <div class="image_flags col-span-1 row-span-2 flex flex-col flex-no-wrap justify-between items-center mr-1">
+        <div class="overflow-hidden flex flex-row justify-center items-center p-1">
+          <img src="./static/img/Fish69.png" alt="Bitterlight" />
+        </div>
+
+        <div class="flagtags">
+          <div
+            class="greenflag inline-block -mr-3 rounded-full w-4 h-4 bg-fish-accent-blue self-center shadow border-2 border-solid border-white">
+          </div>
+          <div
+            class="greenflag inline-block -mr-1 rounded-full w-4 h-4 bg-fish-accent-red self-center shadow border-2 border-solid border-white">
+          </div>
+        </div>
+      </div>
+
+      <div class="name_price col-span-3 row-span-1 flex flex-row flex-no-wrap justify-between items-start pt-1">
+        <div>
+          <p class="font-bold">Pez Remo</p>
+          <p class="text-xs font-semibold -mt-1 text-gray-700">
+            16:00-09:00/14:00-15:00
+          </p>
+        </div>
+        <div>
+          <p class="font-bold self-start">$900</p>
+        </div>
+      </div>
+
+      <div class="location_months col-span-3 row-span-2 flex flex-row flex-no-wrap justify-start items-start pt-1">
+        <div class="w-1/2">
+          <p class="text-xs text-gray-600">Ubicación</p>
+          <p class="font-bold text-base truncate -mt-1">Desemboque</p>
+        </div>
+        <div class="pl-2">
+          <p class="text-xs text-gray-600">Meses</p>
+          <p class="font-bold text-base -mt-1">May-Sep</p>
+        </div>
+      </div>
+    </div>
+
+
+
 
   </section>
+
 
 </body>
 

@@ -11,6 +11,9 @@ module.exports = {
       poppins: ['Poppins'],
     },
     extend: {
+      boxShadow: {
+        fishHeader: '0px 6px 4px rgba(0, 0, 0, 0.02);',
+      },
       colors: {
         'fish-background-lightGray': '#F6F7FB',
         'fish-text-primary': '#001567',
@@ -27,7 +30,7 @@ module.exports = {
         '28': '7rem',
         '52': '15rem',
         '72': '18rem',
-        fisTileWMAx: '18.75rem',
+        fisTileWMAx: '18.4375rem',
         fishHTileDefault: '6.6875rem',
         fishTileWMin: '14.75rem',
       },
